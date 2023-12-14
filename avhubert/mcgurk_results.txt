@@ -1,0 +1,23 @@
+====================== RESULTS ====================
+
+{
+
+    'ba_ga_da': 
+        ['the', 'the', 'the', 'the', 'the', 'there', 'the', 'but', 'the', 'but', 'the', 'the', 'the', 'the', 'the', 
+        'the', 'the', 'the', 'the', 'i', 'oh', 'go', 'go', 'bur', 'there', 'but', 'and', 'there', 'yeah', 'girl',
+         'girl', 'but', 'there', 'but', 'go', 'the', 'there', 'gar', 'god', 'go', 'i', 'i', 'but', 'i', 'i', 'ah', 
+         "i'm", 'i', 'i', 'ah', 'ah', 'i', "well i think we're about 20", 'i', 'blah', 'i', 'uh', 'i', 'i', "i'm"], 
+
+    'ba_fa_va': 
+        ['the', 'the', 'the', 'the', 'but', 'fur', 'the', 'for', 'the', 'for', 'i', 'the', 'the', 'but', 'for', 
+        'the', 'the', 'the', 'the', 'for', 'oh', 'v', 'vul', 'ver', 'uh', 'uh', 'ver', 'ver', 'uh', 'were', 'vert', 
+        'ver', "i'm", "we're", "we're", 'for', 'the', 'ver', 'the', "i'm", 'i', 'i', 'but', 'i', "i'm", 'rah', 'uh', 
+        'i', 'i', 'rah', 'ah', 'the', "but i think we're about 20", 'ah', 'there', 'i', 'i', 'i', 'i', 'a'], 
+
+    'ga_ba_bga': 
+        ['gut', 'the', 'ya', 'thank you', 'gar', 'i', 'i', 'i', 'i', 'gay', 'gar', 'gear', 'i', 'gear', 'i', 'a', 
+        'gear', 'gear', 'the', 'gear', 'and', 'girl', 'i', 'girl', 'girl', 'girl', 'girl', 'girl', 'girl', 'go', 
+        'girl', 'go and', 'girl', 'go', 'i', 'go', 'go and', 'i', 'girl', 'girl', 'oh', 'go', 'girl', 'oh', 'god', 
+        'rah', 'gar', 'gar', 'gar', "that's", 'go', 'go', 'ah', 'girl', 'ah', 'go', 'yeah', 'gar', 'i', 'ah']
+        
+}

@@ -19,6 +19,7 @@ from collections import deque
 import cv2
 from skimage import transform as tf
 from tqdm import tqdm
+import sys, traceback
 
 # -- Landmark interpolation:
 def linear_interpolate(landmarks, start_idx, stop_idx):
@@ -138,10 +139,12 @@ def crop_patch(video_pathname, landmarks, mean_face_landmarks, stablePntsIDs, ST
     num_frames = get_frame_count(video_pathname)
     frame_gen = read_video(video_pathname)
     margin = min(num_frames, window_margin)
+    print(f"NUMFRAMES = {num_frames}, MARGIN = {margin}")
     while True:
         try:
             frame = frame_gen.__next__() ## -- BGR
         except StopIteration:
+            traceback.print_exc(file=sys.stdout)
             break
         if frame_idx == 0:
             q_frame, q_landmarks = deque(), deque()
@@ -178,6 +181,9 @@ def crop_patch(video_pathname, landmarks, mean_face_landmarks, stablePntsIDs, ST
                                             crop_width//2,))
             return np.array(sequence)
         frame_idx += 1
+
+
+    print(f"WE ARRIVED HEEEERE")
     return None
 
 

@@ -280,6 +280,7 @@ class AVHubertDataset(FairseqDataset):
         if 'audio' in self.modalities:
             audio_fn = audio_fn.split(':')[0]
             sample_rate, wav_data = wavfile.read(audio_fn)
+            print(f"SAMPLE RATE : {sample_rate}, SHAPE : {wav_data.shape}")
             assert sample_rate == 16_000 and len(wav_data.shape) == 1
             if np.random.rand() < self.noise_prob:
                 wav_data = self.add_noise(wav_data)
