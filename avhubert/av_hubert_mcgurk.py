@@ -142,7 +142,11 @@ def predict_video(origin_clip_path, mouth_roi_path, audio_path, detector, predic
 
          
 
-def control_experiment(dir):
+def predict_videos_in_dir(dir):
+  """
+  For all videos in dir, predict their content, 
+  and output a map with (video_name, prediction) pairs
+  """
 
   ## MAIN PIPELINE
 
