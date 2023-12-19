@@ -1,4 +1,4 @@
-#import av_hubert_mcgurk
+import av_hubert_mcgurk
 import plot
 from pprint import pprint
 import cached_results
@@ -27,17 +27,7 @@ print("\n")
 pprint(ba_fa_va_words_results)
 
 
-#mcgurk_word_results = av_hubert_mcgurk.mc_gurk_word_experiment('words/mcgurk/complex')
-#print(f"\n\n====================== MCGURK WORD RESULTS ====================\n\n")
-#pprint(mcgurk_word_results)
-
 
 plot.plot_avhubert_figure(words_control_results, ba_fa_va_words_results.values(), ba_fa_va_words_results.values(), path='words_plot.png')
 
-
-"""
-LEFT TODO:
-* investigate videos to see if they're poorly synchronised, maybe investigate differences jad/ismail
-* i guess that's a wrap otherwise
-"""
 

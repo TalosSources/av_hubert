@@ -12,7 +12,7 @@ from fairseq.dataclass.configs import GenerationConfig
 from preparation.align_mouth import landmarks_interpolate, crop_patch, write_video_ffmpeg
 
 
-def install_requirements(): # TODO Sort out that
+def install_requirements():
   # %cd /content/
   #!git clone https://github.com/facebookresearch/av_hubert.git
   #
@@ -90,11 +90,9 @@ def predict(video_path, audio_path, models, saved_cfg, task, tmp_dir):
   saved_cfg.task.data = tmp_dir
   saved_cfg.task.label_dir = tmp_dir
 
-  #### MY OWN TESTS ####
   saved_cfg.task.noise_wav = tmp_dir
   saved_cfg.task.noise_snr = 1.0
   saved_cfg.task.noise_prob = 0.0
-  #### HEHEHEHEHEHE ####
 
   task = tasks.setup_task(saved_cfg.task)
   task.load_dataset(gen_subset, task_cfg=saved_cfg.task)
@@ -158,7 +156,7 @@ def predict_videos_in_dir(dir):
   tmp_dir = os.path.join(data_path, "tmp")
 
 
-  # INSTALL STUFF WE NEED
+  # INSTALL TOOLS
   #install_preprocessing_tools()
   #download_pretrained_model()
 
@@ -200,7 +198,7 @@ def mc_gurk_experiment(experiments):
   tmp_dir = os.path.join(data_path, "tmp")
 
 
-  # INSTALL STUFF WE NEED
+  # INSTALL TOOLS
   #install_preprocessing_tools()
   #download_pretrained_model()
 
@@ -245,7 +243,7 @@ def mc_gurk_word_experiment(videos_dir):
   tmp_dir = os.path.join(data_path, "tmp")
 
 
-  # INSTALL STUFF WE NEED
+  # INSTALL TOOLS
   #install_preprocessing_tools()
   #download_pretrained_model()
 

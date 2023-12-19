@@ -1,3 +1,20 @@
+# This repository is a fork of the original AV-HuBERT repository. It's instructions are below
+
+# Our contribution for ML4Science project
+
+## Scripts (located in the avhubert directory)
+- main.py
+- plot.py
+- Parts of the script av_huber_mcgurk.py
+
+## Usage
+### To plot the experiment using cached results
+- Run the main.py script
+### To run the inference and plot
+- Install requirements using the requirements.txt file
+- Replace the calls to cached results with calls to predict_videos in main.py, and run the script
+
+
 # AV-HuBERT (Audio-Visual Hidden Unit BERT)
 [Learning Audio-Visual Speech Representation by Masked Multimodal Cluster Prediction](https://arxiv.org/abs/2201.02184)
 

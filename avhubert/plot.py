@@ -151,10 +151,6 @@ def plot_avhubert_figure(control_map, b_g_d_preds, b_f_v_preds, path=None):
         for ticklabel, tickcolor in zip(ax.get_xticklabels(), label_colors):
             ticklabel.set_color(tickcolor)
 
-        # Add color indications
-        #for j, label in enumerate(labels):
-        #    ax.text(j + 0.3, -1, label, color=colors[label], ha='center', va='center', fontweight='bold')
-
         # Set plot title
         ax.set_title(f"Experiment {i+1} ({['B..+G..=D..', 'B..+F..=V..'][i]})")
 
@@ -173,12 +169,6 @@ def plot_avhubert_figure(control_map, b_g_d_preds, b_f_v_preds, path=None):
 def plot_control_figures(results):
     """
     Should demonstrate the ability of the model to recognize normal monosyllabic words.
-    We may have, for ba, ga, da, fa and va, the percentage of words correctly classified;
-    So perhaps, 5 bars, or maybe, 5 groups of 2/3/4? bars, that would be :
-    Actual syllable prediction percentage, then the percentage for the other 2 syllables 
-    of some McGurk experiment this syllable is part of, and then maybe an "others" bar.
-    Maybe, we could exclude da and va from this figure, and maybe have 2 bars,
-    One for the actual syllabe, and one (2 for ba) for the corresponding McGurk syllables percentages (for comparaison)
 
     results: should be a map between a ms-word, and it's prediction. one can match on the first letter
     """
@@ -307,9 +297,4 @@ def plot_mcgurk_figures(bgd_results, bfv_results):
     #plt.yscale('log')
     plt.show()
 
-def plot_mcgurk_relative_increase(results):
-    """
-    Some kind of plot that may show how much the percentage of McGurk predictions increased
-    """
-    ...
 
