@@ -126,12 +126,12 @@ def plot_avhubert_figure(control_map, b_g_d_preds, b_f_v_preds, path=None):
     data = [ba_ga_da_results, ba_fa_va_results]
     pprint(data)
     labels = ['A', 'V', 'A+V']
-    colors = {'A': 'blue', 'V': 'yellow', 'A+V': 'green'}
+    colors = {'A': 'blue', 'V': 'orange', 'A+V': 'green'}
     legend_labels = ['Audio', 'Visual', 'McGurk']
     label_colors = [colors[label] for label in labels]
 
     # Create subplots
-    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(9, 6), constrained_layout=True)
+    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(9, 3.5), constrained_layout=True)
 
     fig.supxlabel('Input Video content')
     fig.supylabel('Ratio of prediction occurences')
@@ -151,15 +151,15 @@ def plot_avhubert_figure(control_map, b_g_d_preds, b_f_v_preds, path=None):
         for ticklabel, tickcolor in zip(ax.get_xticklabels(), label_colors):
             ticklabel.set_color(tickcolor)
 
-        # Add legend
-        ax.legend(bars, legend_labels, title='Predicted phonemes', loc='upper right')
-
         # Add color indications
         #for j, label in enumerate(labels):
         #    ax.text(j + 0.3, -1, label, color=colors[label], ha='center', va='center', fontweight='bold')
 
         # Set plot title
-        ax.set_title(f'Experiment {i+1}')
+        ax.set_title(f"Experiment {i+1} ({['B..+G..=D..', 'B..+F..=V..'][i]})")
+
+    # Add legend
+    plt.legend(bars, legend_labels, bbox_to_anchor=(1.05, 1.0),title='Predicted phonemes', loc='upper left')
 
     # Adjust layout
     plt.tight_layout()
